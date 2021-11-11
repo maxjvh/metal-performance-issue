@@ -47,6 +47,7 @@ vertexShader(uint vertexID [[vertex_id]],
     //  divide the pixel coordinates by half the size of the viewport.
     out.position = vector_float4(0.0, 0.0, 0.0, 1.0);
     out.position.xy = pixelSpacePosition / (viewportSize / 2.0);
+    out.position.xy = {out.position.x - 1.0f, out.position.y * -1.0f + 1.0f};
 
     // Pass the input color directly to the rasterizer.
     out.color = vertices[vertexID].color;

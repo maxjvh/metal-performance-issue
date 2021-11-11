@@ -21,6 +21,7 @@ Implementation of our cross-platform view controller
 
     // Set the view to use the default device
     _view = (MTKView *)self.view;
+    _view.frame = NSMakeRect(0, 0, 1600, 900);
     
     _view.device = MTLCreateSystemDefaultDevice();
     
